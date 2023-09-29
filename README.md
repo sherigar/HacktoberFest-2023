@@ -1,6 +1,6 @@
 <h1 align="center"> HACKTOBERFEST 2023</h1>
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/115038430/193918430-2b09986a-cf53-47d9-a5f2-7e433c185468.png"> 
+  <img src="https://doimages.nyc3.cdn.digitaloceanspaces.com/002Blog/1100x640%20Hacktober%20fest%20header.png"> 
 </p>
 <p align="center">
    <img alt="GitHub pull-requests" src="https://img.shields.io/github/issues-pr/sherigar/HacktoberFest-2023">
