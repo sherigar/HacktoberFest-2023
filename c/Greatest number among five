@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main(void) {
+int a,b,c,d,e;
+	printf("\nEnter the value of a,b,c,d,e :\n ");
+	scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
+
+	if(a>b && a>c && a>d && a>e)
+	{
+		printf("a is maximum");
+	}
+	else if(b>c && b>d && b>e)
+	{
+		printf("b is maximum");
+	}
+	else if(c>d && c>e)
+	
+	{
+		printf("c is maximum");
+	}
+	else if(d>e)
+	{
+		printf("d is maximum");
+	}
+	else 
+	{
+		printf("e is maximum");
+	}
+
+	return 0;
+}
