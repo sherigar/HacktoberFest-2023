@@ -14,6 +14,22 @@
 <h3>Hacktoberfest is a program by Digital Ocean, DEV and Github, where you can easily win a T-Shirt just by making 4 pull requests in the month of October to any open source projects on Github.</h3>
 
 # How to participate?
+
+```mermaid
+graph LR
+Z(fork this repo) --> A(Choose Task Type) --> B(C)
+A --> C(C++)
+A --> D(Java)
+A --> E(Python) 
+A --> F(other) 
+B --> G(write any C program) --> L
+C --> H(write any C++ program) --> L
+D --> I(write any Java program) --> L
+E --> J(write any Python program) --> L
+F --> K(write any program in any other general purpose language) --> L
+L(upload) --> N(raise PR) --> O(wait for review)
+```
+
 ### 1. Register for Hacktoberfest at https://hacktoberfest.com/ or [click here](https://hacktoberfest.com/).
 ### 2. Fork this repository by clicking the Fork button on the top right corner of this page or simply [click here](https://github.com/sherigar/HacktoberFest-2023/fork).
 ### 3. Create a new file and **add** a new Program in any programming language like C++, Java, Python, etc. (Note: No duplicate programs can exist!)
