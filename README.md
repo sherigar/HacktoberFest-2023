@@ -55,6 +55,5 @@ L(upload) --> N(raise PR) --> O(wait for review)
 - Different types of search algorithms
 - Number Guessing Game
 - Make calculator without using operators in program
-- New file
 
 <h1 align="center">For any query or support open an issue.<h1>
