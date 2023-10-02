@@ -9,6 +9,16 @@
    <img alt="GitHub stars" src="https://img.shields.io/github/stars/sherigar/HacktoberFest-2023">
 </p>
 
+## Contributors of `Hacktoberfest 2023`
+
+<div align="center">
+
+<a href="https://github.com/sherigar/HacktoberFest-2023/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=sherigar/HacktoberFest-2023" />
+</a>
+  
+</div>
+
 # What is Hacktoberfest?
 
 <h3>Hacktoberfest is a program by Digital Ocean, DEV and Github, where you can easily win a T-Shirt just by making 4 pull requests in the month of October to any open source projects on Github.</h3>
