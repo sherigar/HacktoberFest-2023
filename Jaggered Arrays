@@ -1,0 +1,21 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+    int row;
+    cin>>row;
+    int col;
+    
+    int sizes[1000];
+    int** arr=new int *[row];
+    for(int i=0;i<row;i++){
+        cout<<"enter the size of subarray"<<endl;
+        cin>>col;
+        sizes[i]=col;
+        arr[i]=new int [sizes[i]];
+    }
+    for(int i=0;i<row;i++){
+        
+        for(int j=0;j<sizes[i];j++){
+            cin>>arr[i][j];
+        }
