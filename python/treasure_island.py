@@ -1,4 +1,4 @@
-#It's very begginer friendly game for all who are beginners in python
+#It's very beginner friendly game for all who are beginners in python
 
 # Treasure Island game 
 
