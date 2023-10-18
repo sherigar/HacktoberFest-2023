@@ -25,6 +25,7 @@ This repository aims to create a space where developers of all levels can come t
 4. **Python**
 5. **Java**
 6. **C**
+6. **GO**
 
 ## Project Structure
 
@@ -42,6 +43,8 @@ The repository is organized by language. Each language has its own dedicated dir
 - [Java](https://github.com/Chibuike-edmund/HacktoberFest-2023/tree/main/java)
   
 - [C](https://github.com/Chibuike-edmund/HacktoberFest-2023/tree/main/C)
+- 
+- [GO](https://github.com/Chibuike-edmund/HacktoberFest-2023/tree/main/GO)
 
 
 ## Getting Started
