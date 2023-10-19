@@ -163,4 +163,5 @@ def generate_video(input_path):
 if __name__ == '__main__':
     #Note: MacOs system may not be able to read the material information in the current directory due to security settings, you can put the material information in a directory that has permission to read, and then specify the absolute path of the material content
     generate_video("Replace with the absolute path address of your material") # 
+    
 
