@@ -34,7 +34,7 @@ public:
     }
 };
 
-//recursive way of the problem:
+//recursive way of the problem: added by Hareesh061
 class Solution {
 public:
 
@@ -59,7 +59,7 @@ public:
 };
 
 
-// Two pointer way of the problem:
+// Two pointer way of the problem: added by Hareesh061
 
 class Solution {
 public:
