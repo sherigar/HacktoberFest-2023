@@ -33,3 +33,57 @@ public:
         return water;
     }
 };
+
+//recursive way of the problem: added by Hareesh061
+class Solution {
+public:
+
+    //The maxArea function is used to call the recursive function with appropriate arguments
+    int maxArea(vector<int>& height) {
+
+        //I added a new function named maxAreaRecursive to handle the recursion
+        return maxAreaRecursive(height, 0, height.size() - 1);
+    }
+
+    //The logic inside "maxAreaRecursive" is: It calculates the maximum area between two pointers in a recursive manner
+    int maxAreaRecursive(vector<int>& height, int left, int right) {
+        if (left >= right) {
+            return 0;
+        }
+        int h = min(height[left], height[right]);
+        int w = right - left;
+        int area = h * w;
+
+        return max(area, maxAreaRecursive(height, left + 1, right), maxAreaRecursive(height, left, right - 1));
+    }
+};
+
+
+// Two pointer way of the problem: added by Hareesh061
+
+class Solution {
+public:
+    int maxArea(vector<int>& height) {
+        int maxWater = 0;
+        int left = 0;
+        int right = height.size() - 1;
+
+        //It efficiently calculates the maximum water that can be stored between the vertical lines by moving the pointers towards each other while maximizing the area
+
+        while (left < right) {
+            int h = min(height[left], height[right]);
+            int w = right - left;
+            int area = h * w;
+            maxWater = max(maxWater, area);
+
+            if (height[left] < height[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return maxWater;
+    }
+    //This approach has a time complexity of O(n), making it the most efficient way to solve this problem.
+};
