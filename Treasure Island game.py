@@ -1,49 +1,103 @@
-import tkinter as tk
-from tkinter import messagebox
+import time
 
-def check_choice(choice):
+def intro():
+    print("Welcome to Treasure Island!")
+    time.sleep(2)
+    print("Your mission is to find the hidden treasure.")
+    time.sleep(2)
+    print("You find yourself on a mysterious island...")
+    time.sleep(2)
+
+def choose_path():
+    print("You stand at a crossroads. You can go left or right.")
+    time.sleep(1)
+    choice = input("Which path will you choose? (left/right): ").lower()
     if choice == "left":
-        label.config(text="You've come to a lake. There is an island in the middle of the lake.\n"
-                          "Do you want to wait for a boat or swim across?")
-        button1.config(text="Wait", command=lambda: check_choice("wait"))
-        button2.config(text="Swim", command=lambda: check_choice("swim"))
-    elif choice == "wait":
-        label.config(text="You arrived at the island unharmed. There is a house with 3 doors.\n"
-                          "One red, one yellow, and one blue. Which color do you choose?")
-        button1.config(text="Red", command=lambda: check_choice("red"))
-        button2.config(text="Yellow", command=lambda: check_choice("yellow"))
-        button3.config(text="Blue", command=lambda: check_choice("blue"))
-    elif choice == "blue" or choice == "right":
-        messagebox.showinfo("Result", "You fell into a hole. Game Over.")
-        root.destroy()
-    elif choice == "red":
-        messagebox.showinfo("Result", "It's a room full of fire. Game Over.")
-        root.destroy()
-    elif choice == "yellow":
-        messagebox.showinfo("Result", "You found the treasure! You Win!")
-        root.destroy()
+        print("You've chosen to go left...")
+        time.sleep(2)
+        waterfall()
+    elif choice == "right":
+        print("You've chosen to go right...")
+        time.sleep(2)
+        snake_pit()
+    else:
+        print("Invalid choice. Try again.")
+        choose_path()
+
+def waterfall():
+    print("You approach a beautiful waterfall.")
+    time.sleep(2)
+    print("Do you want to swim across or walk around it?")
+    time.sleep(1)
+    choice = input("Swim or walk? (swim/walk): ").lower()
+    if choice == "walk":
+        print("You've chosen to walk around the waterfall...")
+        time.sleep(2)
+        cave()
     elif choice == "swim":
-        messagebox.showinfo("Result", "You got attacked by an angry trout. Game Over.")
-        root.destroy()
+        print("You've chosen to swim across the waterfall...")
+        time.sleep(2)
+        print("A strong current sweeps you away, and you find yourself back at the crossroads.")
+        choose_path()
+    else:
+        print("Invalid choice. Try again.")
+        waterfall()
 
-root = tk.Tk()
-root.title("Treasure Island Game")
-root.geometry("400x300")
+def snake_pit():
+    print("You encounter a pit full of venomous snakes!")
+    time.sleep(2)
+    print("Do you want to jump over the pit or find another way?")
+    time.sleep(1)
+    choice = input("Jump or find another way? (jump/another way): ").lower()
+    if choice == "jump":
+        print("You jump over the pit and continue your journey...")
+        time.sleep(2)
+        diamond_room()
+    elif choice == "another way":
+        print("You find another way around the pit and continue your journey...")
+        time.sleep(2)
+        diamond_room()
+    else:
+        print("Invalid choice. Try again.")
+        snake_pit()
 
-label = tk.Label(root, text="Welcome to Treasure Island. You're at a crossroad.\n"
-                            "Where do you want to go? Type 'left' or 'right'", wraplength=300)
-label.pack(pady=20)
+def cave():
+    print("You enter a dark cave.")
+    time.sleep(2)
+    print("You see two doors. One is red, and one is blue.")
+    time.sleep(1)
+    choice = input("Which door do you choose? (red/blue): ").lower()
+    if choice == "red":
+        print("You open the red door and enter a room full of treasure!")
+        time.sleep(2)
+        print("Congratulations! You've found the hidden treasure and won the game.")
+    elif choice == "blue":
+        print("You open the blue door and are attacked by a giant dragon. You lose!")
+    else:
+        print("Invalid choice. Try again.")
+        cave()
 
-button_frame = tk.Frame(root)
-button_frame.pack()
+def diamond_room():
+    print("You enter a room with three doors.")
+    time.sleep(2)
+    print("One door is made of gold, one is made of silver, and one is made of diamonds.")
+    time.sleep(1)
+    choice = input("Which door do you choose? (gold/silver/diamonds): ").lower()
+    if choice == "gold":
+        print("You open the gold door and find an empty room. You lose!")
+    elif choice == "silver":
+        print("You open the silver door and find an empty room. You lose!")
+    elif choice == "diamonds":
+        print("You open the diamond door and find the hidden treasure!")
+        time.sleep(2)
+        print("Congratulations! You've found the hidden treasure and won the game.")
+    else:
+        print("Invalid choice. Try again.")
+        diamond_room()
 
-button1 = tk.Button(button_frame, text="Left", command=lambda: check_choice("left"))
-button1.pack(side=tk.LEFT, padx=10)
+def main():
+    intro()
+    choose_path()
 
-button2 = tk.Button(button_frame, text="Right", command=lambda: check_choice("right"))
-button2.pack(side=tk.LEFT, padx=10)
-
-button3 = tk.Button(button_frame, text="Blue", state=tk.DISABLED)
-button3.pack(side=tk.LEFT, padx=10)
-
-root.mainloop()
+if __name__ == "__main__":
+    main()
