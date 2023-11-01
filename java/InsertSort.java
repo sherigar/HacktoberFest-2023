@@ -26,6 +26,7 @@ public class InsertSort {
     private static void insertSort(int[] array) {
         int insert; // The first element of the unordered list
         int insertIndex; // Index of the last element in the ordered list
+
         for (int i = 1; i < array.length; i++) { // With every loop, ordered list +1, unordered list -1, loop array.length -1 times
 
             insert = array[i]; // The first element of the unordered list
@@ -42,6 +43,7 @@ public class InsertSort {
             }
 
         }
+        
         System.out.println(Arrays.toString(array));
     }
 

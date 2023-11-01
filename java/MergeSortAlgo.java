@@ -5,6 +5,7 @@ public class MergeSortAlgo {
 
         int high = arr.length - 1;
         mergeSort(arr, low, high);
+        
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
