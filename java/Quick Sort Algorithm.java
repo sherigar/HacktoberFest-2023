@@ -11,12 +11,11 @@ class QuickSort
 	{
 		int pivot = arr[high]; 
 		int i = (low-1); // index of smaller element
-		for (int j=low; j<high; j++)
-		{
+
+		for (int j=low; j<high; j++) {
 			// If current element is smaller than or
 			// equal to pivot
-			if (arr[j] <= pivot)
-			{
+			if (arr[j] <= pivot) {
 				i++;
 
 				// swap arr[i] and arr[j]
@@ -41,8 +40,7 @@ class QuickSort
 	high --> Ending index */
 	void sort(int arr[], int low, int high)
 	{
-		if (low < high)
-		{
+		if (low < high) {
 			/* pi is partitioning index, arr[pi] is 
 			now at right place */
 			int pi = partition(arr, low, high);
