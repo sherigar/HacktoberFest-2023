@@ -16,7 +16,7 @@ public class HashMapInJava {
         System.out.println(map);
  
         //Searching
-        if(map.containsKey("Indonesia")) {
+        if (map.containsKey("Indonesia")) {
             System.out.println("key is present in the map");
         } else {
             System.out.println("key is not present in the map");
@@ -26,10 +26,10 @@ public class HashMapInJava {
         System.out.println(map.get("Indonesia")); //key doesn't exist
  
         //Iteration (1)
-        for( Map.Entry<String, Integer> e : map.entrySet()) {
+        for ( Map.Entry<String, Integer> e : map.entrySet()) {
             System.out.println(e.getKey());
             System.out.println(e.getValue());
-        }
+        } 
  
         //Iteration (2)
         Set<String> keys = map.keySet();
