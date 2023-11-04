@@ -1,6 +1,5 @@
 import tkinter as tk
 
-
 def add_task():
     task = entry.get()
     if task:
