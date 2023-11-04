@@ -10,6 +10,11 @@ def remove_task():
     selected_task = listbox.curselection()
     if selected_task:
         listbox.delete(selected_task)
+        
+    selected_complete_task = completed_listbox.curselection()
+    if selected_complete_task:
+        completed_listbox.delete(selected_complete_task)
+    
 
 def mark_completed():
     selected_task = listbox.curselection()
@@ -23,6 +28,9 @@ root = tk.Tk()
 root.title("To-Do List")
 
 # Entry for adding tasks
+entry_label = tk.Label(root, text="Write Something")
+entry_label.pack()
+
 entry = tk.Entry(root, width=40)
 entry.pack()
 
