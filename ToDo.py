@@ -51,6 +51,4 @@ completed_listbox = tk.Listbox(root, selectmode=tk.SINGLE, height=10, width=40)
 listbox.pack()
 completed_listbox.pack()
 
-
-
 root.mainloop()
