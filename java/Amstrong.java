@@ -1,3 +1,6 @@
+
+// Find the Armstrong number 
+
 import java.util.*;
 
 public class Amstrong {
